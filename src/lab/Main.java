@@ -24,12 +24,48 @@ public class Main {
                 FunckForFlat();
             }
             else if (option == 3) {
-               // FunckForStreet();
+               FunckForStreet();
             }
             else if (option == 4) {
                // FunckForHouse();
             }
         } while (option != 5);
+    }
+
+    static void FunckForStreet(){
+        String streetName;
+        String streetDescription;
+
+        Street street_new = new Street();
+
+        int option = 0;
+        do {
+            System.out.print("\n  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию из обьекта\n  4) Выход в главное меню\n");
+            System.out.print("Выберите действие: ");
+            do {
+                option = readInt();
+                if (option > 4) {
+                    System.out.print("\nОшибка. выбирете из допустимых значений: ");
+                }
+            } while (option > 4 || option <= 0);
+
+            if (option == 1) {
+                street_new.Set_console();
+            }
+            else if (option == 2) {
+                Scanner in = new Scanner(System.in);
+                System.out.printf("\nУлица: ");
+                streetName = in.nextLine();
+                System.out.printf("Описание улици: ");
+                streetDescription = in.nextLine();
+
+                street_new.Set(streetName, streetDescription);
+            }
+            else if (option == 3) {
+                street_new.Print();
+            }
+
+        } while (option != 4);
     }
 
     static void FunckForFlat(){
