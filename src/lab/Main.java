@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
         int option;
         do {
             System.out.print("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Выход\n");
@@ -18,7 +17,7 @@ public class Main {
             } while (option > 5 || option <= 0);
 
             if (option == 1) {
-                //FunckForLocation();
+                FunckForLocation();
             }
             else if (option == 2) {
                 FunckForFlat();
@@ -102,6 +101,61 @@ public class Main {
 
         } while (option != 4);
 
+    }
+
+    static void FunckForLocation(){
+        int distanceSchool, distanceHospital, distanceKindergarten, numHouse;
+        String houseStreet;
+        int option;
+
+        Location location_new = new Location();
+
+        do {
+            System.out.print("\n  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию из обьекта\n  4) Выход в главное меню\n");
+            System.out.print("Выберите действие: ");
+            do {
+                option = readInt();
+                if (option > 4) {
+                    System.out.print("\nОшибка. выбирете из допустимых значений: ");
+                }
+            } while (option > 4 || option <= 0);
+
+            if (option == 1) {
+                location_new.Set_console();
+            }
+            else if (option == 2) {
+                Scanner in = new Scanner(System.in);
+                System.out.print("\nВыберите расстояние до школы: ");
+                do {
+                    distanceSchool = readInt();
+                } while (distanceSchool <= 0);
+
+                System.out.print("Выберите расстояние до больницы: ");
+                do {
+                    distanceHospital = readInt();
+                }while(distanceHospital <= 0);
+
+
+                System.out.print("Выберите расстояние до детского сада: ");
+                do {
+                    distanceKindergarten = readInt();
+                } while (distanceKindergarten <= 0);
+
+                System.out.print("Номер дома: ");
+                do {
+                    numHouse = readInt();
+                } while (numHouse <= 0);
+
+                System.out.print("\nУлица: ");
+                houseStreet = in.nextLine();
+
+                location_new.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
+            }
+            else if (option == 3) {
+                System.out.println();
+                location_new.Print();
+            }
+        } while (option != 4);
     }
 
     private static int readInt() {
