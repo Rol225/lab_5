@@ -26,7 +26,7 @@ public class Main {
                FunckForStreet();
             }
             else if (option == 4) {
-               // FunckForHouse();
+                FunckForHouse();
             }
         } while (option != 5);
     }
@@ -155,6 +155,88 @@ public class Main {
                 System.out.println();
                 location_new.Print();
             }
+        } while (option != 4);
+    }
+
+    static void FunckForHouse(){
+        int distanceSchool, distanceHospital, distanceKindergarten, numHouse, coin, countRoom, numFlat;
+        String streetDescription;
+        String houseStreet;
+        Scanner in = new Scanner(System.in);
+
+        House house_new = new House();
+        Street street_new = new Street();
+        Flat flat_new = new Flat();
+        Location location_new = new Location();
+
+        int option = 0;
+        do {
+            System.out.print("\n  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию из обьекта\n  4) Выход в главное меню\n");
+            System.out.print("Выберите действие: ");
+            do {
+                option = readInt();
+                if (option > 4) {
+                    System.out.print("\nОшибка. выбирете из допустимых значений: ");
+                }
+            } while (option > 4 || option <= 0);
+
+            if (option == 1) {
+                house_new.Set_console();
+            }
+            else if (option == 2) {
+
+                System.out.print("\nВыберите расстояние до школы: ");
+                do {
+                    distanceSchool = readInt();
+                } while (distanceSchool <= 0);
+
+                System.out.print("Выберите расстояние до больницы: ");
+                do {
+                    distanceHospital = readInt();
+                }while(distanceHospital <= 0);
+
+
+                System.out.print("Выберите расстояние до детского сада: ");
+                do {
+                    distanceKindergarten = readInt();
+                } while (distanceKindergarten <= 0);
+
+
+                System.out.printf("Выберите стоимость квартиры: ");
+                do {
+                    coin = readInt();
+                } while (coin <= 0);
+
+                System.out.printf("Выберите кол-во комнат: ");
+                do {
+                    countRoom = readInt();
+                } while (countRoom <= 0);
+
+                System.out.print("Номер дома: ");
+                do {
+                    numHouse = readInt();
+                } while (numHouse <= 0);
+
+
+                System.out.printf("Номер квартиры: ");
+                do {
+                    numFlat = readInt();
+                } while (numFlat <= 0);
+
+                System.out.printf("\nУлица: ");
+                houseStreet = in.nextLine();
+                System.out.printf("Описание улици: ");
+                streetDescription = in.nextLine();
+
+                location_new.Set(distanceSchool, distanceHospital, distanceKindergarten, houseStreet, numHouse);
+                flat_new.Set(coin, countRoom, numFlat);
+                street_new.Set(houseStreet, streetDescription);
+                house_new.Set(street_new, flat_new, location_new);
+            }
+            else if (option == 3) {
+                house_new.Print();
+            }
+
         } while (option != 4);
     }
 
