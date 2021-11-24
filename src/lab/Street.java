@@ -9,16 +9,16 @@ public class Street {
     void Set(String streetName_2, String streetDescription_2)
     {
         if (streetName_2 != null) {
-            streetName = streetName_2;
+            this.streetName = streetName_2;
         }
         else {
-            streetName = "Error";
+            this.streetName = "Error";
         }
         if (streetName_2 != null) {
-            streetDescription = streetDescription_2;
+            this.streetDescription = streetDescription_2;
         }
         else {
-            streetDescription = "Error";
+            this.streetDescription = "Error";
         }
     }
 
