@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         int option;
         do {
-            System.out.print("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Выход\n");
+            System.out.print("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Массив обьектов класса house\n  6) Выход\n");
             System.out.print("Выберите действие: ");
             do {
                 option = readInt();
@@ -28,7 +28,10 @@ public class Main {
             else if (option == 4) {
                 FunckForHouse();
             }
-        } while (option != 5);
+            else if (option == 5) {
+                FunckForHouses();
+            }
+        } while (option != 6);
     }
 
     static void FunckForStreet(){
@@ -168,8 +171,8 @@ public class Main {
         Street street_new = new Street();
         Flat flat_new = new Flat();
         Location location_new = new Location();
-
         int option = 0;
+
         do {
             System.out.print("\n  1) Заполнить через встроенную функцию\n  2) Заполнить через внешнюю функцию\n  3) Вывести информацию из обьекта\n  4) Выход в главное меню\n");
             System.out.print("Выберите действие: ");
@@ -184,7 +187,6 @@ public class Main {
                 house_new.Set_console();
             }
             else if (option == 2) {
-
                 System.out.print("\nВыберите расстояние до школы: ");
                 do {
                     distanceSchool = readInt();
@@ -195,12 +197,10 @@ public class Main {
                     distanceHospital = readInt();
                 }while(distanceHospital <= 0);
 
-
                 System.out.print("Выберите расстояние до детского сада: ");
                 do {
                     distanceKindergarten = readInt();
                 } while (distanceKindergarten <= 0);
-
 
                 System.out.printf("Выберите стоимость квартиры: ");
                 do {
@@ -216,7 +216,6 @@ public class Main {
                 do {
                     numHouse = readInt();
                 } while (numHouse <= 0);
-
 
                 System.out.printf("Номер квартиры: ");
                 do {
@@ -238,6 +237,32 @@ public class Main {
             }
 
         } while (option != 4);
+    }
+
+    static void FunckForHouses(){
+        int size;
+        int index;
+        System.out.print("\n  Сколько домов создать?: ");
+        size = readInt();
+        House[] list = new House[size];
+
+        for(int i=0;i<size;i++){
+            list[i] = new House();
+            list[i].Set_console();
+        }
+        System.out.print("\n\n  Печать:");
+        for(int i=0;i<size;i++){
+            list[i].Print();
+        }
+        System.out.print("\n  Какой дом редактировать?: ");
+        index = readInt();
+        list[index] = new House();
+        list[index].Set_console();
+        System.out.print("\n\n  Печать:");
+        for(int i=0;i<size;i++){
+            list[i].Print();
+        }
+        System.out.print("\n");
     }
 
     private static int readInt() {

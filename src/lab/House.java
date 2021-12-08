@@ -19,11 +19,17 @@ public class House {
         }
     } // Проверка на ввод числа
 
+    public House() {
+        this.location = new Location();
+        this.flat = new Flat();
+        this.street = new Street();
+    }
+
     void Set(Street street_new, Flat flat_new, Location location_new)
     {
-        location = location_new;
-        flat = flat_new;
-        street = street_new;
+        this.location = location_new;
+        this.flat = flat_new;
+        this.street = street_new;
     }
 
     void Set_console()
