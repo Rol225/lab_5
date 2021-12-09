@@ -6,6 +6,7 @@ public class House {
     private Flat flat;// Квартира
     private Location location;//Расположение дома
     private Street street; //Описание улицы
+    private static int countData = 0; // Кол-во домов в базе
 
     private static int readInt() {
         while (true) {
@@ -101,4 +102,11 @@ public class House {
         System.out.printf("  Цена: %d рублей\n", flat.Get_coin());
         System.out.printf("  Информация о улице: %s\n", street.Get_street_description());
     }
+
+    static int CountData()
+    {
+        countData++;
+        System.out.printf("\n  Кол-во домов использованных в базе: %d\n", countData);
+        return countData;
+    }// Функия счётчик
 }
