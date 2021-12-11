@@ -26,6 +26,23 @@ public class House {
         this.street = new Street();
     }
 
+    public House(Street street_new)
+    {
+        this.flat = new Flat();
+        this.location = new Location();
+        this.street = street_new;
+        CountData();
+    }
+
+    public House(Street street_new, Flat flat_new, Location location_new)
+    {
+        this.location = location_new;
+        this.flat = flat_new;
+        this.street = street_new;
+        CountData();
+    }
+
+
     void Set(Street street_new, Flat flat_new, Location location_new)
     {
         this.location = location_new;

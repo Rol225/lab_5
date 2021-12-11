@@ -9,6 +9,70 @@ public class Location {
     private String houseStreet; //адрес дома
     private int numHouse;
 
+    public Location() {
+        this.distanceHospital = 0;
+        this.distanceKindergarten = 0;
+        this.distanceSchool = 0;
+        this.houseStreet = "";
+        this.numHouse = 0;
+    }
+    public Location(int numHouse_new) {
+        this.distanceHospital = 0;
+        this.distanceKindergarten = 0;
+        this.distanceSchool = 0;
+        this.houseStreet = "";
+        if (numHouse_new <= 0)
+        {
+            this.numHouse = 0;
+        }
+        else
+        {
+            this.numHouse = numHouse_new;
+        }
+    }
+    public Location(int distanceSchool_new, int distanceHospital_new, int distanceKindergarten_new, String houseStreet_new, int numHouse_new){
+        if (distanceSchool_new <= 0)
+        {
+            this.distanceSchool = 0;
+        }
+        else
+        {
+            this.distanceSchool = distanceSchool_new;
+        }
+        if (distanceHospital_new <= 0)
+        {
+            this.distanceHospital = 0;
+        }
+        else
+        {
+            this.distanceHospital = distanceHospital_new;
+        }
+        if (distanceKindergarten_new <= 0)
+        {
+            this.distanceKindergarten = 0;
+        }
+        else
+        {
+            this.distanceKindergarten = distanceKindergarten_new;
+        }
+        if (numHouse_new <= 0)
+        {
+            this.numHouse = 0;
+        }
+        else
+        {
+            this.numHouse = numHouse_new;
+        }
+        if (houseStreet_new != null)
+        {
+            this.houseStreet = houseStreet_new;
+        }
+        else
+        {
+            this.houseStreet = "Error";
+        }
+    }
+
     private static int readInt() {
         while (true) {
             Scanner in = new Scanner(System.in);
@@ -53,7 +117,6 @@ public class Location {
         else {
             this.houseStreet = "Error";
         }
-
     }
 
     void Set_console()

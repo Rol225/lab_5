@@ -6,6 +6,43 @@ public class Street {
     private String streetName;
     private String streetDescription;
 
+    public Street()
+    {
+        this.streetName = "";
+        this.streetDescription = "";
+    }
+    public Street(String streetName_2)
+    {
+        this.streetDescription = "";
+        if (streetName_2 != null)
+        {
+            this.streetName = streetName_2;
+        }
+        else
+        {
+            this.streetName = "Error";
+        }
+    }
+    public Street(String streetName_new, String streetDescription_new)
+    {
+        if (streetName_new != null)
+        {
+            this.streetName = streetName_new;
+        }
+        else
+        {
+            this.streetName = "Error";
+        }
+        if (streetName_new != null)
+        {
+            this.streetDescription = streetDescription_new;
+        }
+        else
+        {
+            this.streetDescription = "Error";
+        }
+    }
+
     void Set(String streetName_2, String streetDescription_2)
     {
         if (streetName_2 != null) {
