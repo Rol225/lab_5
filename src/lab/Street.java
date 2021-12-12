@@ -14,48 +14,92 @@ public class Street {
     public Street(String streetName_2)
     {
         this.streetDescription = "";
-        if (streetName_2 != null)
-        {
-            this.streetName = streetName_2;
+        try{
+            if (streetName_2 != null)
+            {
+                this.streetName = streetName_2;
+            }
+            else
+            {
+                this.streetName = "Error";
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.streetName = "Error";
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
     }
     public Street(String streetName_new, String streetDescription_new)
     {
-        if (streetName_new != null)
-        {
-            this.streetName = streetName_new;
+        try{
+            if (streetName_new != null)
+            {
+                this.streetName = streetName_new;
+            }
+            else
+            {
+                this.streetName = "Error";
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.streetName = "Error";
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (streetName_new != null)
-        {
-            this.streetDescription = streetDescription_new;
+        try{
+            if (streetName_new != null)
+            {
+                this.streetDescription = streetDescription_new;
+            }
+            else
+            {
+                this.streetDescription = "Error";
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.streetDescription = "Error";
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
     }
 
-    void Set(String streetName_2, String streetDescription_2)
+    void Set(String streetName_new, String streetDescription_new)
     {
-        if (streetName_2 != null) {
-            this.streetName = streetName_2;
+        try{
+            if (streetName_new != null)
+            {
+                this.streetName = streetName_new;
+            }
+            else
+            {
+                this.streetName = "Error";
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
         }
-        else {
-            this.streetName = "Error";
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (streetName_2 != null) {
-            this.streetDescription = streetDescription_2;
+        try{
+            if (streetName_new != null)
+            {
+                this.streetDescription = streetDescription_new;
+            }
+            else
+            {
+                this.streetDescription = "Error";
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
         }
-        else {
-            this.streetDescription = "Error";
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
     }
 

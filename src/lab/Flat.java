@@ -18,34 +18,66 @@ public class Flat {
     {
         this.coin = 0;
         this.countRoom = 0;
-        if (numFlat_2 <= 0)
-        {
-            this.numFlat = 0;
+        try{
+            if (numFlat_2 <= 0)
+            {
+                this.numFlat = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.numFlat = numFlat_2;
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.numFlat = numFlat_2;
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
     }
     public Flat(int coin_2, int countRoom_2, int numFlat_2)
     {
-        if (coin_2 <= 0) {
-            this.coin = 0;
+        try{
+            if (coin_2 <= 0) {
+                this.coin = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else {
+                this.coin = coin_2;
+            }
         }
-        else {
-            this.coin = coin_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (countRoom_2 <= 0) {
-            this.countRoom = 0;
+        try{
+            if (countRoom_2 <= 0) {
+                this.countRoom = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else {
+                this.countRoom = countRoom_2;
+            }
         }
-        else {
-            this.countRoom = countRoom_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (numFlat_2 <= 0) {
-            this.numFlat = 0;
+        try{
+            if (numFlat_2 <= 0) {
+                this.numFlat = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else {
+                this.numFlat = numFlat_2;
+            }
         }
-        else {
-            this.numFlat = numFlat_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
     }
 
@@ -63,25 +95,48 @@ public class Flat {
 
     void Set(int coin_2, int countRoom_2, int numFlat_2)
     {
-        if (coin_2 <= 0) {
-            coin = 0;
+        try{
+            if (coin_2 <= 0) {
+                this.coin = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else {
+                this.coin = coin_2;
+            }
         }
-        else {
-            coin = coin_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (countRoom_2 <= 0) {
-            countRoom = 0;
+        try{
+            if (countRoom_2 <= 0) {
+                this.countRoom = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else {
+                this.countRoom = countRoom_2;
+            }
         }
-        else {
-            countRoom = countRoom_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (numFlat_2 <= 0) {
-            numFlat = 0;
+        try{
+            if (numFlat_2 <= 0) {
+                this.numFlat = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else {
+                this.numFlat = numFlat_2;
+            }
         }
-        else{
-            numFlat = numFlat_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-
     }
 
     void Set_console()

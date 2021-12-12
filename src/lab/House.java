@@ -30,18 +30,45 @@ public class House {
     {
         this.flat = new Flat();
         this.location = new Location();
-        this.street = street_new;
+        try{
+            this.street = street_new;
+        }
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
+        }
         CountData();
     }
 
     public House(Street street_new, Flat flat_new, Location location_new)
     {
-        this.location = location_new;
-        this.flat = flat_new;
-        this.street = street_new;
+        try{
+            this.location = location_new;
+        }
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
+        }
+        try{
+            this.flat = flat_new;
+        }
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
+        }
+        try{
+            this.street = street_new;
+        }
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
+        }
         CountData();
     }
-
 
     void Set(Street street_new, Flat flat_new, Location location_new)
     {

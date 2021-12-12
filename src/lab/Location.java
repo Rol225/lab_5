@@ -21,55 +21,103 @@ public class Location {
         this.distanceKindergarten = 0;
         this.distanceSchool = 0;
         this.houseStreet = "";
-        if (numHouse_new <= 0)
-        {
-            this.numHouse = 0;
+        try{
+            if (numHouse_new <= 0)
+            {
+                this.numHouse = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.numHouse = numHouse_new;
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.numHouse = numHouse_new;
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
     }
     public Location(int distanceSchool_new, int distanceHospital_new, int distanceKindergarten_new, String houseStreet_new, int numHouse_new){
-        if (distanceSchool_new <= 0)
-        {
-            this.distanceSchool = 0;
+        try{
+            if (distanceSchool_new <= 0)
+            {
+                this.distanceSchool = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.distanceSchool = distanceSchool_new;
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.distanceSchool = distanceSchool_new;
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (distanceHospital_new <= 0)
-        {
-            this.distanceHospital = 0;
+        try{
+            if (distanceHospital_new <= 0)
+            {
+                this.distanceHospital = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.distanceHospital = distanceHospital_new;
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.distanceHospital = distanceHospital_new;
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (distanceKindergarten_new <= 0)
-        {
-            this.distanceKindergarten = 0;
+        try{
+            if (distanceKindergarten_new <= 0)
+            {
+                this.distanceKindergarten = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.distanceKindergarten = distanceKindergarten_new;
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.distanceKindergarten = distanceKindergarten_new;
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (numHouse_new <= 0)
-        {
-            this.numHouse = 0;
+        try{
+            if (numHouse_new <= 0)
+            {
+                this.numHouse = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.numHouse = numHouse_new;
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.numHouse = numHouse_new;
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (houseStreet_new != null)
-        {
-            this.houseStreet = houseStreet_new;
+        try{
+            if (houseStreet_new != null)
+            {
+                this.houseStreet = houseStreet_new;
+            }
+            else
+            {
+                this.houseStreet = "Error";
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
         }
-        else
+        catch (Exception ex)
         {
-            this.houseStreet = "Error";
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
     }
 
@@ -85,37 +133,87 @@ public class Location {
         }
     } // Проверка на ввод числа
 
-    void Set(int distanceSchool_2, int distanceHospital_2, int distanceKindergarten_2, String houseStreet_2, int numHouse_2)
+    void Set(int distanceSchool_new, int distanceHospital_new, int distanceKindergarten_new, String houseStreet_new, int numHouse_new)
     {
-        if (distanceSchool_2 <= 0) {
-            this.distanceSchool = 0;
+        try{
+            if (distanceSchool_new <= 0)
+            {
+                this.distanceSchool = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.distanceSchool = distanceSchool_new;
+            }
         }
-        else {
-            this.distanceSchool = distanceSchool_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (distanceHospital_2 <= 0) {
-            this.distanceHospital = 0;
+        try{
+            if (distanceHospital_new <= 0)
+            {
+                this.distanceHospital = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.distanceHospital = distanceHospital_new;
+            }
         }
-        else {
-            this.distanceHospital = distanceHospital_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (distanceKindergarten_2 <= 0) {
-            this.distanceKindergarten = 0;
+        try{
+            if (distanceKindergarten_new <= 0)
+            {
+                this.distanceKindergarten = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.distanceKindergarten = distanceKindergarten_new;
+            }
         }
-        else {
-            this.distanceKindergarten = distanceKindergarten_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (numHouse_2 <= 0) {
-            this.numHouse = 0;
+        try{
+            if (numHouse_new <= 0)
+            {
+                this.numHouse = 0;
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
+            else
+            {
+                this.numHouse = numHouse_new;
+            }
         }
-        else {
-            this.numHouse = numHouse_2;
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
-        if (houseStreet_2 != null) {
-            this.houseStreet = houseStreet_2;
+        try{
+            if (houseStreet_new != null)
+            {
+                this.houseStreet = houseStreet_new;
+            }
+            else
+            {
+                this.houseStreet = "Error";
+                throw new Exception("Ошибка присваивания значения переменной обьекта!");
+            }
         }
-        else {
-            this.houseStreet = "Error";
+        catch (Exception ex)
+        {
+            System.out.println("Ошибка!");
+            System.out.println(ex);
         }
     }
 
