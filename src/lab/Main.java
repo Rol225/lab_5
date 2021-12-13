@@ -7,14 +7,14 @@ public class Main {
     public static void main(String[] args) {
         int option;
         do {
-            System.out.print("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Массив обьектов класса house\n  6) Выход\n");
+            System.out.print("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Массив обьектов класса house\n  6) 2-x мерный массив объектов flat\n  7) Выход\n");
             System.out.print("Выберите действие: ");
             do {
                 option = readInt();
                 if (option > 5) {
                     System.out.print("\nОшибка. выбирете из допустимых значений: ");
                 }
-            } while (option > 5 || option <= 0);
+            } while (option > 7 || option <= 0);
 
             if (option == 1) {
                 FunckForLocation();
@@ -31,7 +31,10 @@ public class Main {
             else if (option == 5) {
                 FunckForHouses();
             }
-        } while (option != 6);
+            else if (option == 6) {
+                TwodimensionalArrayFlats();
+            }
+        } while (option != 7);
     }
 
     static void FunckForStreet(){
@@ -261,6 +264,46 @@ public class Main {
         System.out.print("\n\n  Печать:");
         for(int i=0;i<size;i++){
             list[i].Print();
+        }
+        System.out.print("\n");
+    }
+
+    static void TwodimensionalArrayFlats()
+    {
+        int size, size_2;
+
+        System.out.print("\n\n  Введите размерность основного массива: ");
+        size = readInt();
+        System.out.print("\n  Введите размерность дочерних массивов: ");
+        size_2 = readInt();
+
+        Flat[][] Flats = new Flat[size][];
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < size_2; j++)
+            {
+                Flats[i] = new Flat[size_2];
+            }
+        }
+        System.out.print("\n\n  Введите значения: ");
+        for (int i = 0; i < size; i++)
+        {
+            System.out.print("\n");
+            for (int j = 0; j < size_2; j++)
+            {
+                Flats[i][j] = new Flat();
+                Flats[i][j].Set_console();
+            }
+        }
+
+        System.out.print("\n\n  Ваши данные: ");
+        for (int i = 0; i < size; i++)
+        {
+            System.out.print("\n");
+            for (int j = 0; j < size_2; j++)
+            {
+                Flats[i][j].Print();
+            }
         }
         System.out.print("\n");
     }
