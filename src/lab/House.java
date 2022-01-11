@@ -147,6 +147,24 @@ public class House {
         System.out.printf("  Информация о улице: %s\n", street.Get_street_description());
     }
 
+    public Flat GetFlat()
+    {
+        return this.flat;
+    }
+    public Location GetLocation()
+    {
+        return this.location;
+    }
+    public Street GetStreet()
+    {
+        return this.street;
+    }
+
+    public void PrintDepth()
+    {
+        System.out.print("\n  Глубина не определена для базового класса \n");
+    }// Виртуальная функция
+
     static int CountData()
     {
         countData++;

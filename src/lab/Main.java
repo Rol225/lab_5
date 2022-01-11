@@ -7,14 +7,14 @@ public class Main {
     public static void main(String[] args) {
         int option;
         do {
-            System.out.print("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Массив обьектов класса house\n  6) 2-x мерный массив объектов flat\n  7) Выход\n");
+            System.out.print("  1) Класс location\n  2) Класс flat\n  3) Класс street\n  4) Класс house\n  5) Массив обьектов класса house\n  6) 2-x мерный массив объектов flat\n  7) Класс houseUnderWater\n  8) Выход\n");
             System.out.print("Выберите действие: ");
             do {
                 option = readInt();
-                if (option > 5) {
+                if (option > 9 ){
                     System.out.print("\nОшибка. выбирете из допустимых значений: ");
                 }
-            } while (option > 7 || option <= 0);
+            } while (option > 8 || option <= 0);
 
             if (option == 1) {
                 FunckForLocation();
@@ -34,7 +34,10 @@ public class Main {
             else if (option == 6) {
                 TwodimensionalArrayFlats();
             }
-        } while (option != 7);
+            else if (option == 7) {
+                FunckForhouseUnderWater();
+            }
+        } while (option != 8);
     }
 
     static void FunckForStreet(){
@@ -305,6 +308,21 @@ public class Main {
                 Flats[i][j].Print();
             }
         }
+        System.out.print("\n");
+    }
+
+    static void FunckForhouseUnderWater()
+    {
+        Street street = new Street("Камчатка", "Очень холодно");
+        Location location = new Location(1, 2, 3, "Камчатка", 4);
+        Flat flat = new Flat(1500, 2, 123);
+        HouseUnderWater houseUnderWater = new HouseUnderWater(14, street, flat, location, 125.43);
+
+        houseUnderWater.Print("\tПодводное царство!");
+
+        System.out.print("  \tБазовый класс: \n");
+        House house = new House(street, flat, location);
+        house.Print();
         System.out.print("\n");
     }
 
